@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minha Página</title>
+    <style>
+        body{
+            margin: 0px;
+        }
+        .meu-box{
+            border: 1px solid red;
+            border-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="meu-box" id="id-div">Minha div - tere</div>
+    <div class="meu-box" id="id-div2">Minha div - tere</div>
+    <script>
+        let elemento = document.getElementById("id-div")
+        // let elemento2 = document.getElementsByTagName("div")[1]
+        // let elementoX = document.getElementsByClassName("meu-box")[0];
+        //elementoX.style.color = "red";
+        elemento.innerHTML = "<p>Eu sou uma div</p>";
+        elemento.style.color = "rgb(0,0,0)";
+        elemento.style.borderColor = "pink";
+        elemento.style.backgroundColor= "lightblue";
+
+        let elementoCriado = document.createElement("a");
+        elementoCriado.href = "http://google.com";
+        elementoCriado.innerHTML = "MeuLink";
+        elemento.appendChild(elementoCriado);
+
+        elemento.removeChild(elementoCriado);
+
+        // Buscar o elemento body.
+        //buscar o elemento id="id-div2"
+        //Remover o elemento id="id-div2" do body
+        let body = document.getElementsByTagName("body")[0];
+        let tagParaRemover = document.getElementById("id-div2");
+        body.removeChild(tagParaRemover);
+
+        elemento.onclick = function(){
+            console.log("Click na div");
+            elemento.style.backgroundColor = "red";
+        }
+        elemento.addEventListener('click', function(){
+            elemento.style.backgroundColor = 'blue';
+        });
+
+    </script>
+</body>
+</html>
