@@ -1,0 +1,46 @@
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.6rem;
+    font-family: sans-serif;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+header{
+    background-color: #000028;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+nav ul{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    margin: 0 1rem;
+}
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem;
+    border: 1px solid #fff;
+    border-radius: 5px;
+}
+
+main{
+    width: fit-content;
+    margin: 10rem auto;
+}
+#lista-compra{
+    list-style: none;
+    padding: 0;
+}

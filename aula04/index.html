@@ -1,0 +1,50 @@
+<!-- Faça um código que ao clicar no botão a div mude de posição na tela para um lugar aleatório;
+Faça um código que ao clicar no botão escreva seu nome dentro da DIV;
+Crie um botão no HTML que ao clicar no mesmo execute a tarefa 1 e 2; -->
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <header>
+      <div class="texto_logo">1023 B</div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Sobre</a></li>
+          <li><a href="#">Estudantes</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <input type="text" id="input_lista">
+      <button id="btn_add">Adicionar</button>
+      <h1>Lista de Compras</h1>
+      <ul id="lista-compra">
+        <li>Arroz</li>
+      </ul>
+    
+    </main>
+
+
+    <script>
+      const btnAdd = document.getElementById('btn_add');
+      const inputLista = document.getElementById('input_lista');
+      const listaCompra = document.getElementById('lista-compra');
+
+      btnAdd.addEventListener('click', () => {
+        if (inputLista.value === '') return;
+        const li = document.createElement('li');
+        li.textContent = inputLista.value;
+        listaCompra.appendChild(li);
+        inputLista.value = '';
+      });
+
+    </script>
+  </body>
+</html>
