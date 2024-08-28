@@ -29,10 +29,34 @@
             const y = jg.offsetTop
             const step = 5
             if(event.key === "ArrowDown"){
-                jg.style.top = `${y+step}px`
+                const alturaTela = window.innerHeight
+                if(y+step>alturaTela-100){
+                    jg.style.top = `${alturaTela-100}px`
+                }else{
+                    jg.style.top = `${y+step}px`
+                }
             }
             if(event.key === "ArrowRight"){
-                jg.style.left = `${x+step}px`
+                const larguraTela = window.innerWidth
+                if(x+step>larguraTela-100){
+                    jg.style.left = `${larguraTela-100}px`
+                }else{
+                    jg.style.left = `${x+step}px`
+                }
+            }
+            if(event.key === "ArrowLeft"){
+                if(x-step<0){
+                    jg.style.left = "0px"
+                }else{
+                    jg.style.left = `${x-step}px`
+                }
+            }
+            if(event.key === "ArrowUp"){
+                if(y-step<0){
+                    jg.style.top = "0px"
+                }else{
+                    jg.style.top = `${y-step}px`
+                }
             }
         })
     </script>
