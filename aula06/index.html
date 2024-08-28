@@ -24,12 +24,16 @@
     <div id="jogador"></div>
     <script>
         const jg = document.getElementById("jogador");
-        const x = jg.offsetLeft
-        const y = jg.offsetTop
-        jg.style.left = `${x+50}px`
-        jg.style.top =  `${y+100}px`
-        document.body.addEventListener("keydown",()=>{
-            alert("cliquei na tecla");
+        document.body.addEventListener("keydown",(event)=>{
+            const x = jg.offsetLeft
+            const y = jg.offsetTop
+            const step = 5
+            if(event.key === "ArrowDown"){
+                jg.style.top = `${y+step}px`
+            }
+            if(event.key === "ArrowRight"){
+                jg.style.left = `${x+step}px`
+            }
         })
     </script>
 </body>
